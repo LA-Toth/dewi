@@ -39,7 +39,7 @@ setup(
     application for the commands in dewi_commands package.
     """,
     license="LGPLv3",
-    version="1.5",
+    version="2.0.0",
     author="Laszlo Attila Toth",
     author_email="python-dewi@laszloattilatoth.me",
     maintainer="Laszlo Attila Toth",
