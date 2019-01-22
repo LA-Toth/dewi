@@ -30,24 +30,13 @@ except ImportError:
 
 setup(
     name="dewi",
-    description="A toolchain and framework for everyday tasks",
+    description="DEWI - A toolchain and framework for everyday tasks",
     long_description=\
     """
-    DEWI is started as a developer tool, but contains many different commands (small tools).
+    DEWI is started as a developer tool, but contains many different dewi_commands.commands (small tools).
 
-    DEWI can also use as a framework via its plugins - it's highly extensible.
-
-    It contains commands for
-    * syncing directory trees to local / remote location
-    * manage photos to eliminate duplicates and sort them in year/year-month/year-month-day/FNAME.EXT form
-    * edit files specified as filename:linenumber form
-    * split Balabit's Zorp logs to one session per file
-    * log into the Ubuntu (Linux) running bash on ubuntu on windows, to the same directory
-
-    It also contains framework for
-    * plugins (used by DEWI)
-    * generic modules (to split task, and so on) with a Config - dict to store values; and emit messages
-    * logparser: parse log files by modules based on the generic modules and emit messages
+    It is a meta package for the DEWI packages and provides a command-line
+    application for the commands in dewi_commands package.
     """,
     license="LGPLv3",
     version="1.5",
@@ -80,15 +69,14 @@ setup(
     zip_safe=True,
     use_2to3=False,
     python_requires='>=3.6',
-    packages=find_packages(exclude=['pylintcheckers', '*test*']) + ['dewi.tests'],
+    packages=find_packages(exclude=['pylintcheckers', '*test*']),
     entry_points={
         'console_scripts': [
             'dewi=dewi.__main__:main',
         ]
     },
-    requires=[
-        'Jinja2',
-        'pyyaml',
-        'watchdog',
+    install_requires=[
+        'dewi_core>=2.0.1',
+        'dewi_commands>=2.0.0',
     ]
 )
