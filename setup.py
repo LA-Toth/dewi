@@ -39,7 +39,7 @@ setup(
     application for the commands in dewi_commands package.
     """,
     license="LGPLv3",
-    version="2.0.0",
+    version="2.1.0",
     author="Laszlo Attila Toth",
     author_email="python-dewi@laszloattilatoth.me",
     maintainer="Laszlo Attila Toth",
@@ -59,6 +59,8 @@ setup(
         'Programming Language :: Python',
         'Programming Language :: Python :: 3 :: Only',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
         'Topic :: System :: Filesystems',
         'Topic :: Software Development',
         'Topic :: Software Development :: Libraries',
@@ -76,7 +78,7 @@ setup(
         ]
     },
     install_requires=[
-        'dewi_core>=2.0.1',
-        'dewi_commands>=2.0.0',
+        'dewi_core>=3.1.0',
+        'dewi_commands>=2.1.1',
     ]
 )

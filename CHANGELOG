@@ -1,3 +1,7 @@
+2.1.0
+  - Updated to run with latest other DEWI modules:
+    dewi-core 3.1.0 and dewi-commands 2.1.0
+
 2.0.0
   - !!! DEWI goes into multiple repositories and packages
   - use only 'protected' members with single leading underscore ('_')
