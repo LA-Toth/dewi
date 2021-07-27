@@ -19,8 +19,8 @@
 
 import sys
 
-if sys.hexversion < 0x03060000:
-    raise RuntimeError("Required python version: 3.6 or newer (current: %s)" % sys.version)
+if sys.hexversion < 0x03080000:
+    raise RuntimeError("Required python version: 3.8 or newer (current: %s)" % sys.version)
 
 try:
     from setuptools import setup, find_packages
@@ -58,8 +58,6 @@ setup(
         'Operating System :: Microsoft :: Windows',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3 :: Only',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Topic :: System :: Filesystems',
         'Topic :: Software Development',
@@ -78,7 +76,7 @@ setup(
         ]
     },
     install_requires=[
-        'dewi_core>=3.1.0',
+        'dewi_core>=4.0.0',
         'dewi_commands>=2.1.1',
     ]
 )
