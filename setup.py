@@ -39,7 +39,7 @@ setup(
     application for the commands in dewi_commands package.
     """,
     license="LGPLv3",
-    version="2.1.0",
+    version="2.2.0",
     author="Laszlo Attila Toth",
     author_email="python-dewi@laszloattilatoth.me",
     maintainer="Laszlo Attila Toth",
@@ -68,7 +68,7 @@ setup(
     ],
     zip_safe=True,
     use_2to3=False,
-    python_requires='>=3.6',
+    python_requires='>=3.8',
     packages=find_packages(exclude=['pylintcheckers', '*test*']),
     entry_points={
         'console_scripts': [

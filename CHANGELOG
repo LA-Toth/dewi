@@ -1,3 +1,7 @@
+2.2.0
+ - requires Python 3.8
+ - updated to use dewi-core 4.0.0
+
 2.1.0
   - Updated to run with latest other DEWI modules:
     dewi-core 3.1.0 and dewi-commands 2.1.0
