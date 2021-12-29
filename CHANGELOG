@@ -1,3 +1,8 @@
+2.3.0
+ - use dewi-core 5.0.0 (<6)
+ - use dewi-commands 3.0.0 (<4)
+ - remove unused dewi/workspace
+
 2.2.0
  - requires Python 3.8
  - updated to use dewi-core 4.0.0
