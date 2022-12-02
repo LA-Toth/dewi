@@ -23,7 +23,7 @@ setup(
     application for the commands in dewi_commands package.
     """,
     license="LGPLv3",
-    version="2.3.0",
+    version="2.3.1",
     author="Laszlo Attila Toth",
     author_email="python-dewi@laszloattilatoth.me",
     maintainer="Laszlo Attila Toth",
@@ -61,7 +61,7 @@ setup(
         ]
     },
     install_requires=[
-        'dewi_core >=5.0.0, <6',
-        'dewi_commands >=3.0.0, <4',
+        'dewi_core >=5.4.0, <6',
+        'dewi_commands >=3.1.0, <4',
     ]
 )

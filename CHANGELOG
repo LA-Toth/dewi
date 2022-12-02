@@ -1,3 +1,8 @@
+2.3.1
+ - use type annotations w/o typing module, requires python 3.10+
+ - use dewi-core 5.4.0
+ - use dewi-commands 3.1.0
+
 2.3.0
  - use dewi-core 5.0.0 (<6)
  - use dewi-commands 3.0.0 (<4)
