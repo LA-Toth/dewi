@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dewi"
+version = "2.3.1"
+description = "DEWI - A toolchain and framework for everyday tasks"
+readme = "README.rst"
+requires-python = ">=3.10"
+license = "LGPL-3.0-only"
+license-files = ["COPYING"]
+keywords = ["tool", "framework", "development", "synchronization"]
+authors = [{name = "Laszlo Attila Toth", email = "python-dewi@laszloattilatoth.me"}]
+maintainers = [{name = "Laszlo Attila Toth", email = "python-dewi@laszloattilatoth.me"}]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: System :: Filesystems",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+    "Topic :: Documentation :: Sphinx",
+    "Topic :: Utilities",
+]
+# A meta package: its whole job is to pull in a consistent set. Every DEWI
+# package is listed explicitly rather than left to transitivity, so that
+# installing `dewi` pins the whole family and a mismatched member is caught
+# here instead of at import time.
+dependencies = [
+    "dewi-dataclass >=1.1.0, <2",
+    "dewi_core >=6.1.0, <7",
+    "dewi_utils >=3.2.0, <4",
+    "dewi_module_framework >=2.0.2, <3",
+    "dewi_logparsers >=2.1.0, <3",
+    "dewi_realtime_sync >=2.2.0, <3",
+    "dewi_commands >=3.2.0, <4",
+]
+
+[project.scripts]
+dewi = "dewi.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/LA-Toth/dewi"
+
+[tool.setuptools.packages.find]
+# namespaces = false keeps this equivalent to the setup.py find_packages(),
+# which never picked up directories without an __init__.py.
+namespaces = false
+exclude = ["pylintcheckers", "*test*", "out*", "venv*", "samples*"]
