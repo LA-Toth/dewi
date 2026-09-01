@@ -1,3 +1,24 @@
+2.4.0
+ - follow the releases of the components: dewi_utils 4 (its threading module
+   changed how a Job subclass is written), dewi_core 6.1 and dewi_commands
+   3.3. This package only depends on the others, so a release of it is how
+   they are pinned together.
+ - require the current DEWI packages. The dewi_core pin said
+   '>=5.4.0, <6' while dewi_core is 6.x, so the meta package could not be
+   installed alongside the stack it exists to pull in. Already broken when
+   6.0.0 was released.
+ - as a meta package its job is a consistent set, so every DEWI package is
+   now named explicitly with an upper bound rather than left to
+   transitivity: a mismatched member is caught by pip instead of at import
+   time.
+ - packaging: setup.py replaced by pyproject.toml (PEP 517/518/621), as in
+   the other DEWI repos. The console script moves to [project.scripts]. The
+   license is the SPDX expression per PEP 639, with COPYING declared via
+   license-files. zip_safe and the sys.hexversion guard are gone --
+   requires-python does the latter, before anything is downloaded.
+ - classifiers extended to Python 3.12-3.14.
+ - Makefile uses pytest
+
 2.3.1
  - use type annotations w/o typing module, requires python 3.10+
  - use dewi-core 5.4.0
