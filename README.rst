@@ -15,6 +15,7 @@ Purpose
 As the name implies the original purpose was to add tools.
 
 It's not split to many different packages:
+  * dewi_dataclass_
   * dewi_core_
   * dewi_utils_
   * dewi_module_framework_
@@ -22,6 +23,7 @@ It's not split to many different packages:
   * dewi_realtime_sync_
   * dewi_commands_  - which is the main package a a command-line tool
 
+.. _dewi_dataclass: https://github.com/LA-Toth/dewi-dataclass
 .. _dewi_core: https://github.com/LA-Toth/dewi_core
 .. _dewi_utils: https://github.com/LA-Toth/dewi_utils
 .. _dewi_module_framework: https://github.com/LA-Toth/dewi_module_framework
